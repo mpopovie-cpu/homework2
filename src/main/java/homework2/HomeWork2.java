@@ -32,5 +32,10 @@ public class HomeWork2 {
         }
     }
 
-
+    // Задание 4: увеличение каждого элемента массива
+    public static void increaseArray(int value, int[] array) {
+        for (int i = 0; i < array.length; i++) {
+            array[i] += value;
+        }
+    }
 }
