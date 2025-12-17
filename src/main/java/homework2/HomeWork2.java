@@ -59,7 +59,7 @@ public class HomeWork2 {
         }
 
         if (leftSum > rightSum) {
-            System.out.println("Первая половина больше");
+            System.out.println("Первая половина больш");
         } else if (rightSum > leftSum) {
             System.out.println("Вторая половина больше");
         } else {
