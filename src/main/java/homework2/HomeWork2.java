@@ -12,7 +12,7 @@ public class HomeWork2 {
         printStringTimes(3, "Hi");  // Задание 1
     }
 
-    // Задание 1: печать строки указанное количество раз
+    // Задание 1: печать строки указанное количество ра3
     public static void printStringTimes(int times, String text) {
         for (int i = 0; i < times; i++) {
             System.out.println(text);
