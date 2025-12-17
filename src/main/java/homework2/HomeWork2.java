@@ -38,4 +38,28 @@ public class HomeWork2 {
             array[i] += value;
         }
     }
+
+
+    // Задание 5: сравнение сумм половин массива
+    public static void compareArrayHalves(int[] array) {
+        int mid = array.length / 2;
+        int sum1 = 0;
+        int sum2 = 0;
+
+        for (int i = 0; i < mid; i++) {
+            sum1 += array[i];
+        }
+
+        for (int i = mid; i < array.length; i++) {
+            sum2 += array[i];
+        }
+
+        if (sum1 > sum2) {
+            System.out.println("Первая половина больше");
+        } else if (sum2 > sum1) {
+            System.out.println("Вторая половина больше");
+        } else {
+            System.out.println("Суммы равны");
+        }
+    }
 }
