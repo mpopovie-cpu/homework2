@@ -3,18 +3,23 @@ package homework2;
 public class HomeWork2 {
 
     public static void main(String[] args) {
-        int[] arr = new int[5];
-        fillArray(7, arr);
+        int[] arr = {1, 2, 3, 10, 10, 10};
+
+        fillArray(7, arr);          // Задание 3
+        increaseArray(3, arr);      // Задание 4
+        sumGreaterThanFive(arr);    // Задание 2
+        compareArrayHalves(arr);    // Задание 5
+        printStringTimes(3, "Hi");  // Задание 1
     }
 
-    // Задание 1
+    // Задание 1: печать строки указанное количество раз
     public static void printStringTimes(int times, String text) {
         for (int i = 0; i < times; i++) {
             System.out.println(text);
         }
     }
 
-    // Задание 2
+    // Задание 2: сумма элементов массива больше 5
     public static void sumGreaterThanFive(int[] array) {
         int sum = 0;
         for (int num : array) {
@@ -25,7 +30,7 @@ public class HomeWork2 {
         System.out.println(sum);
     }
 
-    //  Задание 3
+    // Задание 3: заполнение массива указанным числом
     public static void fillArray(int value, int[] array) {
         for (int i = 0; i < array.length; i++) {
             array[i] = value;
@@ -39,24 +44,23 @@ public class HomeWork2 {
         }
     }
 
-
     // Задание 5: сравнение сумм половин массива
     public static void compareArrayHalves(int[] array) {
         int mid = array.length / 2;
-        int sum1 = 0;
-        int sum2 = 0;
+        int leftSum = 0;
+        int rightSum = 0;
 
         for (int i = 0; i < mid; i++) {
-            sum1 += array[i];
+            leftSum += array[i];
         }
 
         for (int i = mid; i < array.length; i++) {
-            sum2 += array[i];
+            rightSum += array[i];
         }
 
-        if (sum1 > sum2) {
+        if (leftSum > rightSum) {
             System.out.println("Первая половина больше");
-        } else if (sum2 > sum1) {
+        } else if (rightSum > leftSum) {
             System.out.println("Вторая половина больше");
         } else {
             System.out.println("Суммы равны");
